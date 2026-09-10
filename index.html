@@ -211,6 +211,33 @@
     background: #374151;
     color: white;
 }
+        .skill {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.skill p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.bar {
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html {
+    width: 80%;
+}
     </style>
 </head>
 
@@ -254,7 +281,13 @@
     <!-- Skills -->
     <section id="skills">
         <h2>My Skills 💻</h2>
-
+        <div class="skill">
+    <p>HTML</p>
+    <div class="bar">
+        <div class="progress html"></div>
+    </div>
+        </div>
+        
         <div class="cards">
 
             <div class="card">
