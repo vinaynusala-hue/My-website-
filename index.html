@@ -4,71 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vinay's Website</title>
+    <title>Vinay | Portfolio</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f7fb;
+            background: #f5f7fb;
             color: #222;
         }
 
+        /* Navigation */
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
             background: #111827;
-            padding: 15px;
+            padding: 18px 10px;
             text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 15px;
+            margin: 0 8px;
+            font-size: 14px;
         }
 
-        header {
-            background: #111827;
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #111827, #2563eb);
             color: white;
-            text-align: center;
-            padding: 60px 20px;
         }
 
-        header h1 {
-            font-size: 40px;
-            margin: 0;
+        .hero h1 {
+            font-size: 48px;
+            margin: 10px 0;
         }
 
-        header p {
-            font-size: 18px;
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
         }
 
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sections */
         section {
-            padding: 50px 20px;
+            padding: 70px 20px;
             text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        /* About */
+        .about {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
         .card {
             background: white;
-            max-width: 600px;
-            margin: auto;
-            padding: 30px;
+            width: 280px;
+            padding: 30px 20px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        footer {
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            font-size: 22px;
+        }
+
+        /* Contact */
+        .contact {
             background: #111827;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #080d18;
             color: white;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            nav a {
+                font-size: 12px;
+                margin: 0 4px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -77,53 +169,87 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Home -->
-    <header id="home">
-        <h1>Welcome to My Website 🚀</h1>
-        <p>Hi, I'm Vinay</p>
-    </header>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Hi, I'm Vinay 👋</h1>
+            <p>B.Tech Data Science Student | Programmer | Creator</p>
+            <a href="#projects" class="button">View My Projects</a>
+        </div>
+    </section>
 
     <!-- About -->
     <section id="about">
-        <div class="card">
-            <h2>About Me 👨‍💻</h2>
+        <h2>About Me 👨‍💻</h2>
+
+        <div class="about">
             <p>
-                Hello! I'm Vinay. I am learning programming
-                and website development.
+                Hello! I'm Vinay. I'm a B.Tech Data Science student
+                interested in programming, technology and website development.
+                This is my personal portfolio website.
             </p>
         </div>
     </section>
 
     <!-- Skills -->
     <section id="skills">
-        <div class="card">
-            <h2>My Skills 💻</h2>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Java</p>
-            <p>Python</p>
+        <h2>My Skills 💻</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌐 HTML</h3>
+                <p>Learning how to build websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 CSS</h3>
+                <p>Learning website design and styling.</p>
+            </div>
+
+            <div class="card">
+                <h3>☕ Java</h3>
+                <p>Learning Java programming.</p>
+            </div>
+
+            <div class="card">
+                <h3>🐍 Python</h3>
+                <p>Learning Python programming.</p>
+            </div>
+
         </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-        <div class="card">
-            <h2>My Projects 🚀</h2>
-            <p>My first website</p>
-            <p>More projects coming soon...</p>
+        <h2>My Projects 🚀</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌐 My First Website</h3>
+                <p>This portfolio website created using HTML and CSS.</p>
+            </div>
+
+            <div class="card">
+                <h3>💡 Future Project</h3>
+                <p>More exciting projects will be added soon.</p>
+            </div>
+
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-        <div class="card">
-            <h2>Contact 📧</h2>
-            <p>You can contact me here.</p>
-        </div>
+    <section class="contact" id="contact">
+        <h2>Contact Me 📧</h2>
+        <p>Thanks for visiting my website!</p>
+        <br>
+        <a href="#home" class="button">Back to Top ↑</a>
     </section>
 
+    <!-- Footer -->
     <footer>
-        © 2026 Vinay's Website
+        <p>© 2026 Vinay | My Portfolio</p>
     </footer>
 
 </body>
