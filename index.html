@@ -239,6 +239,14 @@
 .html {
     width: 80%;
 }
+        #modeBtn {
+    transition: 0.3s;
+}
+
+body.dark #modeBtn {
+    background: #ffffff;
+    color: #111111;
+}
     </style>
 </head>
 
@@ -247,7 +255,7 @@
     <!-- Navigation -->
     <nav>
         <a href="#home">Home</a>
-        <button onclick="toggleMode()">🌙 Mode</button>
+        <button id="modeBtn" onclick="toggleMode()">🌙 Mode</button>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
