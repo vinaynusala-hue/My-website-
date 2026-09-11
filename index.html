@@ -240,12 +240,23 @@
     width: 80%;
 }
         #modeBtn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
+#modeBtn:hover {
+    transform: scale(1.05);
+}
+
 body.dark-mode #modeBtn {
-    background: #ffffff;
-    color: #111111;
+    background: #facc15;
+    color: #111827;
 }
     </style>
 </head>
@@ -366,6 +377,14 @@ body.dark-mode #modeBtn {
     <script>
 function toggleMode() {
     document.body.classList.toggle("dark-mode");
+
+    const button = document.getElementById("modeBtn");
+
+    if (document.body.classList.contains("dark-mode")) {
+        button.innerHTML = "☀️ Light Mode";
+    } else {
+        button.innerHTML = "🌙 Dark Mode";
+    }
 }
     </script>
 </body>
